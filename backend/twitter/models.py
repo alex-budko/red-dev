@@ -49,7 +49,6 @@ class UserAccount(AbstractBaseUser):
     objects = UserAccountManager()
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['username']
 
     def has_perm(self):
         "Does the user have a specific permission?"
