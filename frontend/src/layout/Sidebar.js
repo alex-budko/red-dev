@@ -11,22 +11,13 @@ import {
     Text,
     useDisclosure,
   } from "@chakra-ui/react";
+  
   import {
     FiHome,
-    FiTrendingDown,
     FiCompass,
     FiSettings,
     FiMenu,
-    FiCreditCard,
   } from "react-icons/fi";
-  
-  import {
-    FaRegMoneyBillAlt
-  } from 'react-icons/fa'
-  
-  import {
-    AiOutlineTrophy
-  } from 'react-icons/ai'
   
   import { Link as ReactLink } from "react-router-dom";
   

@@ -2,21 +2,29 @@ import Sidebar from "./layout/Sidebar";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Explore from "./pages/Explore";
+import Home from "./pages/Explore";
+
 import {
   Avatar,
   Button,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChatIcon, CloseIcon } from "@chakra-ui/icons";
+import { useMemo, useState } from "react";
 import { UserContext } from "./user-context/UserContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LogIn from "./auth_pages/LogIn";
 import SignUp from "./auth_pages/SignUp"
 
-
 function App() {
+  const [user, setUser] = useState(
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : { username: "" }
+  );
+  
+  const _user = useMemo(() => ({ user, setUser }), [user, setUser]);
+  
   return (
     <Router>
       <UserContext.Provider value={_user}>
