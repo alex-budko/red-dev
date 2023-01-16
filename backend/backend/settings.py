@@ -13,12 +13,13 @@ SECRET_KEY = 'django-insecure-%vfqmdr)6@jpx07)q#()@+u=*f(e%__smunjy(t^o!bbz_*4lo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'twitter',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,6 +37,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = 'market.UserAccount'
 
 ROOT_URLCONF = 'backend.urls'
 
