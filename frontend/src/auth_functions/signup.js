@@ -15,7 +15,7 @@ export const signup = async (username, password) => {
 
   try {
     await axios
-      .post(`http://localhost:8000/market/users/`, body, config)
+      .post(`http://localhost:8000/twitter/users/`, body, config)
       .then((res) => {
         const user_data = res.data
 

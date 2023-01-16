@@ -35,21 +35,18 @@ import {
       //user
       const username = e.target[0].value;
       
-      //email
-      const email = e.target[1].value;
-  
       //password
-      const password = e.target[2].value;
+      const password = e.target[1].value;
   
-      signup(username, email, password).then((_user) => {
+      signup(username, password).then((_user) => {
         if (!_user["error"]) {
           setUser(_user);
           navigate("/");
         } else {
+      
           //reset form
           e.target[0].value = "";
           e.target[1].value = "";
-          e.target[2].value = "";
   
           setIsInvalid(true);
         }
@@ -77,15 +74,11 @@ import {
             <Stack spacing={4}>
               <form onSubmit={(e)=>onSubmit(e)}>
                 <HStack>
-                  <FormControl id="username" isInvalid={isInvalid}>
+                  <FormControl id="username" isRequired isInvalid={isInvalid}>
                     <FormLabel>Username</FormLabel>
                     <Input type="text" />
                   </FormControl>
                 </HStack>
-                <FormControl id="email" isRequired isInvalid={isInvalid}>
-                  <FormLabel>Email address</FormLabel>
-                  <Input type="email" />
-                </FormControl>
                 <FormControl id="password" isRequired isInvalid={isInvalid}>
                   <FormLabel>Password</FormLabel>
                   <InputGroup>

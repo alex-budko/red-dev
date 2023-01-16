@@ -2,7 +2,7 @@ import Sidebar from "./layout/Sidebar";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Explore from "./pages/Explore";
-import Home from "./pages/Explore";
+import Home from "./pages/Home";
 
 import {
   Avatar,

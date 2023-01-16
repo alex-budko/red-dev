@@ -11,6 +11,7 @@ import {
   import { Link, useNavigate } from "react-router-dom";
   import { logout } from "../auth_functions/logout";
   import { UserContext } from "../user-context/UserContext";
+  import {TbFaceId} from 'react-icons/tb'
   
   export default function Settings() {
   
@@ -33,6 +34,7 @@ import {
         >
           <VStack spacing={"5"}>
             <Heading>Settings</Heading>
+            <TbFaceId style={{height: '250px', width: '250px'}} />
             <Button
             onClick={()=> {
               navigate('/')
@@ -41,6 +43,7 @@ import {
               width={"60%"}
               position="absolute"
               bottom={"5"}
+              color='white'
               size="lg"
               _hover={{ bgColor: "red.800" }}
               bgColor="red.600"

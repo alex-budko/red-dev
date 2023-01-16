@@ -28,13 +28,13 @@ import {
   
       setIsInvalid(false);
   
-      //email
-      const email = e.target[0].value;
+      //username
+      const username = e.target[0].value;
   
       //password
       const password = e.target[1].value;
   
-      login(email, password).then((_user) => {
+      login(username, password).then((_user) => {
         if (!_user["error"]) {
           setUser(_user);
           navigate("/");
@@ -64,9 +64,9 @@ import {
           >
             <form onSubmit={(e) => onSubmit(e)}>
               <Stack spacing={4}>
-                <FormControl isInvalid={isInvalid} id="email">
-                  <FormLabel>Email address</FormLabel>
-                  <Input type="email" />
+                <FormControl isInvalid={isInvalid} id="username">
+                  <FormLabel>Username</FormLabel>
+                  <Input type="text" />
                 </FormControl>
                 <FormControl isInvalid={isInvalid} id="password">
                   <FormLabel>Password</FormLabel>
