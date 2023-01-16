@@ -45,7 +45,7 @@ SIMPLE_JWT = {
 
     'AUTH_HEADER_TYPES': ('Bearer',),
     'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
-    'USER_ID_FIELD': 'email',
+    'USER_ID_FIELD': 'username',
 }
 
 MIDDLEWARE = [

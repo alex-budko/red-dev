@@ -2,6 +2,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 
 export const login = async (username, password) => {
+  console.log(username, password)
   const config = {
     headers: {
       "Content-Type": "application/json",
